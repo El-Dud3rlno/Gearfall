@@ -1,0 +1,9 @@
+node_modules
+.env
+.env.local
+.pnpm-store
+.DS_Store
+coverage
+apps/web/dist
+apps/api/.vercel
+apps/web/.vercel

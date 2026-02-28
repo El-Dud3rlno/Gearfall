@@ -1,5 +1,5 @@
 # Documentation
 
-Specification source files live under `docs/spec/`.
-
-Legacy binary previews are no longer committed; generate or download artifacts from CI/release outputs.
+- `docs/architecture.md` — Vercel two-project architecture.
+- `docs/runbook.md` — cloud-first deployment and provisioning runbook.
+- `docs/spec/` — product/system spec files and Codex reference exports.

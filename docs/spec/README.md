@@ -1,15 +1,8 @@
-# Spec Documents
+# Gearfall Spec Folder
 
-Markdown files under `docs/spec/` are the only canonical, editable spec sources.
+This folder stores authoritative product and system specification files and image exports used by Codex.
 
-## Binary outputs
+- Base spec images: `docs/spec/images/`
+- Vercel addendum: `docs/spec/vercel/`
 
-PDF and PNG spec previews are **generated outputs**, not tracked source files.
-
-Generate outputs locally with:
-
-```bash
-scripts/export-spec-assets.sh
-```
-
-CI/release pipelines should publish the generated files as downloadable artifacts.
+Binary exports (`.pdf`, `.png`) are tracked with Git LFS. If your diff viewer cannot preview binary files, review the markdown source and LFS pointer changes.
