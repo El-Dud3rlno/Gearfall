@@ -1,0 +1,25 @@
+{
+  "name": "@gearfall/api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Vercel functions build during deployment'",
+    "lint": "echo 'No lint configured for @gearfall/api'",
+    "test": "echo 'No tests configured for @gearfall/api'",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed": "node prisma/seed.js",
+    "db:generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.20.0",
+    "vercel": "^35.2.0"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}

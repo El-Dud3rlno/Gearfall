@@ -1,0 +1,17 @@
+You are working in Gearfall's cloud-first architecture.
+
+Mandatory context files:
+1) Read docs from `docs/spec/images`.
+2) Read addendum images from `docs/spec/vercel/images`.
+
+Deployment assumptions:
+- Frontend is Vercel project `gearfall-web` at `apps/web`.
+- API is Vercel project `gearfall-api` at `apps/api`.
+- API is serverless under `/api/*` (no production `listen()` servers).
+- Postgres is hosted (`DATABASE_URL`), not local-only.
+- Do not assume local hosting as the default validation path.
+
+Implementation requirements for future runs:
+- Keep web/API deployable as separate Vercel projects from this monorepo.
+- Use `VITE_API_BASE_URL` for frontend API base configuration.
+- Keep migration/seed flow aligned with protected admin functions or documented Vercel CLI process.
