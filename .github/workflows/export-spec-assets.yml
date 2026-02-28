@@ -1,0 +1,25 @@
+name: Export Spec Assets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'docs/spec/**'
+      - 'scripts/export-spec-assets.sh'
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install export dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc wkhtmltopdf poppler-utils
+      - name: Generate spec assets
+        run: scripts/export-spec-assets.sh
+      - name: Upload generated artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gearfall-spec-assets
+          path: docs/spec/vercel/artifacts/*
